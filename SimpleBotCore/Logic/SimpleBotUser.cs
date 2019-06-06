@@ -26,35 +26,24 @@ namespace SimpleBotCore.Logic
                             {
                                 { "A", 1 }
                             }
-                }
+                { "quant", 0 }                
             };
             
-
-            //collection.InsertOne(doc);
-            
-            //var collection = db.GetCollection<BsonDocument>("col01");
-            //var doc = new BsonDocument();
-
+            //var collection = db.GetCollection<BsonDocument>("col01");            
             //r_q4b3swn2j8
             //var filter = new SimpleMessage("r_q4b3swn2j8", "", "");
             //var result = collection.Find(filter.Id);
 
-            var collection = db.GetCollection<SimpleMessage>("col01");
-            
-            
-            //collection.InsertOne(message);
-
-            //var result = collection.Find("{Id:r_q4b3swn2j8}");
-            //var filter = Builders<SimpleMessage>.Filter.Eq(x => x.Id, "r_q4b3swn2j8");
+            var collection = db.GetCollection<BsonDocument>("col01");
             
             var filter = new BsonDocument() {
                 { "campo1", 1 }
             };
             
-            //var result = collection.Find(filter).FirstOrDefault();
+            var result = collection.Find(filter).FirstOrDefault();
 
-            //if(result.Quant <= 0)
-                //message.Quant += 1;
+            if(result.Quant <= 0)
+                message.Quant += 1;
 
             collection.InsertOne(message);
             
