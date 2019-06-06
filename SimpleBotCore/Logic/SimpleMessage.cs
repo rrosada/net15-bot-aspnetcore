@@ -11,6 +11,8 @@ namespace SimpleBotCore.Logic
         public string User { get; }
         public string Text { get; }
 
+        public int Quant { get; set; }
+
         public SimpleMessage(string id, string username, string text)
         {
             this.Id = id;
