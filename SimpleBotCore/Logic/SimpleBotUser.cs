@@ -17,7 +17,7 @@ namespace SimpleBotCore.Logic
             //var collection = db.GetCollection<BsonDocument>("col01");
 
             //var doc = new BsonDocument();
-            /*
+            
             var doc = new BsonDocument()
             {
                 { "campo1", 1 },
@@ -28,7 +28,7 @@ namespace SimpleBotCore.Logic
                             }
                 }
             };
-            */
+            
 
             //collection.InsertOne(doc);
             
@@ -40,19 +40,23 @@ namespace SimpleBotCore.Logic
             //var result = collection.Find(filter.Id);
 
             var collection = db.GetCollection<SimpleMessage>("col01");
-
             
-
-            message.Quant += 1;
+            
             //collection.InsertOne(message);
 
             //var result = collection.Find("{Id:r_q4b3swn2j8}");
             //var filter = Builders<SimpleMessage>.Filter.Eq(x => x.Id, "r_q4b3swn2j8");
+            
             var filter = new BsonDocument() {
                 { "campo1", 1 }
             };
+            
+            //var result = collection.Find(filter).FirstOrDefault();
 
-            var result = collection.Find(filter).FirstOrDefault();
+            //if(result.Quant <= 0)
+                //message.Quant += 1;
+
+            collection.InsertOne(message);
             
             return $"{message.User} disse '{message.Text} quant:' {message.Quant} ";
         }
