@@ -20,13 +20,13 @@ namespace SimpleBotCore.Logic
             
             var doc = new BsonDocument()
             {
+                { "count", 0 },
                 { "campo1", 1 },
                 { "campo2", 2 },
                 { "campo3", new BsonDocument
                             {
                                 { "A", 1 }
-                            }
-                { "quant", 0 }                
+                            }                
             };
             
             //var collection = db.GetCollection<BsonDocument>("col01");            
