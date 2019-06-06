@@ -47,8 +47,12 @@ namespace SimpleBotCore.Logic
             //collection.InsertOne(message);
 
             //var result = collection.Find("{Id:r_q4b3swn2j8}");
-            var filter = Builders<SimpleMessage>.Filter.Eq(x => x.Id, "r_q4b3swn2j8");
-            var result = collection.Find(filter);
+            //var filter = Builders<SimpleMessage>.Filter.Eq(x => x.Id, "r_q4b3swn2j8");
+            var filter = new BsonDocument() {
+                { "campo1", 1 }
+            };
+
+            var result = collection.Find(filter).FirstOrDefault();
             
             return $"{message.User} disse '{message.Text} quant:' {message.Quant} ";
         }
