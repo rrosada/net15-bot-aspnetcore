@@ -49,7 +49,7 @@ namespace SimpleBotCore.Logic
             //var result = collection.Find("{Id:r_q4b3swn2j8}");
             var filter = Builders<SimpleMessage>.Filter.Eq(x => x.Id, "r_q4b3swn2j8");
             var result = collection.Find(filter);
-
+            
             return $"{message.User} disse '{message.Text} quant:' {message.Quant} ";
         }
 
