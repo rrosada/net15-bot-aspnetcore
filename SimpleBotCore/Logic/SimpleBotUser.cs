@@ -9,15 +9,15 @@ namespace SimpleBotCore.Logic
 {
     public class SimpleBotUser
     {
-        public string Reply(SimpleMessage message)
+        public string Reply(SimpleMessage message, int countMessage)
         {            
-            var mongoClient = new MongoClient();
+            //var mongoClient = new MongoClient();
 
-            var db = mongoClient.GetDatabase("15net");
+            //var db = mongoClient.GetDatabase("15net");
             //var collection = db.GetCollection<BsonDocument>("col01");
 
             //var doc = new BsonDocument();
-
+            /*
             var doc = new BsonDocument()
             {
                 { "campo1", 1 },
@@ -36,13 +36,13 @@ namespace SimpleBotCore.Logic
             
             var result = collection.Find(filter).FirstOrDefault();
 
-            if(result.Quant <= 0)
-                message.Quant += 1;
+            //if(result.Quant <= 0)
+                //message.Quant += 1;
 
-            collection.InsertOne(message);
-            
-            return $"{message.User} disse '{message.Text} quant:' {message.Quant} ";
+            //collection.InsertOne(message);
+            */
+
+            return $"{message.User} disse '{message.Text} quant:' {countMessage} ";
         }
-
     }
 }

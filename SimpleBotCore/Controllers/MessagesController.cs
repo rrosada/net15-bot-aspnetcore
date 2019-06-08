@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Bot.Connector;
 using Microsoft.Bot.Schema;
 using SimpleBotCore.Logic;
+using SimpleBotCore.Logic.Repository;
 
 namespace SimpleBotCore.Controllers
 {
@@ -13,7 +14,7 @@ namespace SimpleBotCore.Controllers
     public class MessagesController : Controller
     {
         SimpleBotUser _bot = new SimpleBotUser();
-
+        
         public MessagesController(SimpleBotUser bot)
         {
             this._bot = bot;
@@ -47,9 +48,26 @@ namespace SimpleBotCore.Controllers
 
             var message = new SimpleMessage(userFromId, userFromName, text);
 
-            string response = _bot.Reply(message);
+            try
+            {
+                var _repository = new SimpleMessageRepository();
+                _repository.Insert(message);
 
-            await ReplyUserAsync(activity, response);
+                // verificar quantas mensagens ja foram gravadas na base
+                // $"{message.User} disse '{message.Text} quant:' {countMessage} ";
+                //var _result = _repository.Find("{'Id':" + message.Id + "}");
+                var _result = _repository.Find($"{message.Id}");
+
+                var _countMessages = _result.Count();
+
+                string response = _bot.Reply(message, _countMessages);
+
+                await ReplyUserAsync(activity, response);
+            }
+            catch
+            {
+                throw;
+            }
         }
 
         // Responde mensagens usando o Bot Framework Connector
