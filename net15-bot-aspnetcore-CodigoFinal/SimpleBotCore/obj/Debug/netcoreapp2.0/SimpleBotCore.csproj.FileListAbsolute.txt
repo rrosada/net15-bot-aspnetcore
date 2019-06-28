@@ -1,0 +1,11 @@
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\bin\Debug\netcoreapp2.0\SimpleBotCore.deps.json
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\bin\Debug\netcoreapp2.0\SimpleBotCore.runtimeconfig.json
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\bin\Debug\netcoreapp2.0\SimpleBotCore.runtimeconfig.dev.json
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\bin\Debug\netcoreapp2.0\SimpleBotCore.dll
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\bin\Debug\netcoreapp2.0\SimpleBotCore.pdb
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\obj\Debug\netcoreapp2.0\SimpleBotCore.csproj.CoreCompileInputs.cache
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\obj\Debug\netcoreapp2.0\SimpleBotCore.AssemblyInfoInputs.cache
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\obj\Debug\netcoreapp2.0\SimpleBotCore.AssemblyInfo.cs
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\obj\Debug\netcoreapp2.0\SimpleBotCore.dll
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\obj\Debug\netcoreapp2.0\SimpleBotCore.pdb
+C:\Users\fe083\Downloads\net15-bot-aspnetcore-master\net15-bot-aspnetcore-master\SimpleBotCore\obj\Debug\netcoreapp2.0\SimpleBotCore.csprojAssemblyReference.cache
